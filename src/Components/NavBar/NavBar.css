@@ -1,0 +1,44 @@
+header{
+  background-color: red;
+  color: antiquewhite;
+  position: fixed;   /* lo fija en pantalla */
+  top: 0;            /* lo ubica arriba */
+  left: 0;
+  width: 100%;       /* que ocupe todo el ancho */
+  z-index: 1000;     /* que se mantenga por encima de otros elementos */
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  align-items: center;
+}
+
+.navbar {
+  padding: 1rem;
+  color: white;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.dropdown {
+  list-style: none;
+  position: absolute;
+  top: 50px;
+  background-color: red;
+  padding: 0.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.dropdown-item {
+  padding: 0.5rem 1rem;
+  color: white;
+}
+
+.dropdown-item:hover {
+  background-color: rgb(10, 6, 1);
+}
