@@ -1,0 +1,132 @@
+.home-container {
+  font-family: 'Poppins', sans-serif;
+  padding: 20px;
+  color: white;
+  background-color: #8B0000; /* rojo oscuro */
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.hero {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #ffe066; /* amarillo */
+}
+
+.btn-primary {
+  background-color: #ffe066;
+  border: none;
+  padding: 12px 25px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #8B0000;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #ffd633;
+}
+
+.featured-products {
+  margin-top: 50px;
+}
+
+.featured-products h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  color: #fff;
+}
+
+.product-list {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.product-card {
+  background-color: #b22222; /* un rojo más claro */
+  border-radius: 8px;
+  width: 250px;
+  padding: 15px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.product-card h3 {
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.product-card p {
+  font-size: 0.9rem;
+  color: #fff8;
+}
+
+.contact {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.contact p {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  color: #ffe066;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border: 2px solid #ffe066;
+  color: #ffe066;
+  padding: 10px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #ffe066;
+  color: #8B0000;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .product-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-card {
+    width: 80%;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+}

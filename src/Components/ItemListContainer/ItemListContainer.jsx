@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import {useParams} from "react-router-dom";
-import ItemList from './ItemList';
 import products from "../../data/products";
 
 function ItemListContainer (){
@@ -24,9 +23,30 @@ useEffect(() => {
  }, [categoryId])
 
 return (
-    <div>
-      <h2>Catálogo {categoryId ? `${categoryId}` : ""}</h2>
-    <ItemList items={items}/>
+   <div>
+      <h2>Catálogo {categoryId ? `de ${categoryId}` : "completo"}</h2>
+      <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
+        {items.map((item) => (
+          <div
+            key={item.id}
+            style={{
+              border: "1px solid #ccc",
+              borderRadius: "10px",
+              padding: "1rem",
+              width: "200px",
+            }}
+          >
+            <img
+              src={item.image}
+              alt={item.title}
+              style={{ width: "100%", height: "auto", objectFit: "cover" }}
+            />
+            <h4>{item.title}</h4>
+            <p>{item.description}</p>
+            <p><strong>${item.price}</strong></p>
+          </div>
+        ))}
+      </div>
     </div>
 )}
 
